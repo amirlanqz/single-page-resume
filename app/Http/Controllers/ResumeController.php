@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataObjects\Resume;
 use Illuminate\Support\Facades\Storage;
 
 class ResumeController extends Controller
@@ -13,7 +14,7 @@ class ResumeController extends Controller
         $resultResume = json_decode($resume, true);
 
         return view('resume', [
-            'resume' => $resultResume
+            'resume' => Resume::fromArray($resultResume),
         ]);
     }
 }

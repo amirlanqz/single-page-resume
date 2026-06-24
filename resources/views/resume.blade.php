@@ -5,6 +5,6 @@
     <title>Document</title>
 </head>
 <body>
-    Hello {{ $resume['basics']['name'] }}
+    Hello {{ $resume->basics->name }}
 </body>
 </html>
